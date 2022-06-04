@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
- * Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2017-2019, 2021, The Linux Foundation. All rights reserved.
  */
 
 #include "ipahal.h"
@@ -225,7 +225,11 @@ static struct ipahal_stats_init_pyld *ipahal_generate_init_pyld_flt_rt_v4_5(
 	void *params, bool is_atomic_ctx)
 {
 	struct ipahal_stats_init_pyld *pyld;
+<<<<<<< HEAD
 	int num = (int)(long)params;
+=======
+	int num = (uintptr_t)(params);
+>>>>>>> 95be18797bfcfae5988703e848fa17aa5942ec8e
 
 	if (num > IPA_MAX_FLT_RT_CNT_INDEX ||
 		num <= 0) {
